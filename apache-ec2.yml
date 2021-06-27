@@ -1,6 +1,5 @@
 Description: AWS CloudFormation Template for creating EC2 instance hosted HTML file 
-             It is using CloudFormation helper scripts to install, configure and update apache WebServer inside the EC2 instance
-
+             It is using Cloudfromation Helper Scripts to configure and install apache WebServer
 # Parameters =====================================================================================================================
 
 Parameters:
