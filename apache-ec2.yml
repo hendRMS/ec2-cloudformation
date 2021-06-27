@@ -5,7 +5,7 @@ Description: AWS CloudFormation Template for creating EC2 instance hosted HTML f
 
 Parameters:
   InstanceType:
-    Description: WebServer EC2 instance type (has default, AllowedValues)
+    Description: WebServer EC2 instance type (has default, AllowedValues).
     Type: String
     Default: t2.micro
     AllowedValues:
@@ -21,7 +21,7 @@ Parameters:
     Type: String
 
   ImageId: 
-    Description: Latest Amazon AMI
+    Description: Latest Amazon AMI.
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
 
@@ -31,19 +31,19 @@ Parameters:
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   
   VPC:
-    Description: VPC to operate in
+    Description: VPC that EC2 will operate in it.
     Type: AWS::EC2::VPC::Id
 
   SubnetId:
-    Description: List of Subnet IDs
+    Description: Subnet ID that EC2 will operate in it.
     Type: AWS::EC2::Subnet::Id
 
   S3BucketName:
-    Description: Name of an existing bucket to download files from
+    Description: Name of an existing bucket to download files from. 
     Type: String
 
   IndexPrefix:
-    Description: Prefix of HTML file uploaded to S3
+    Description: Prefix of HTML file uploaded to S3.
     Type: String
     ConstraintDescription: must be a name of an existing file in s3 bucket.
 
