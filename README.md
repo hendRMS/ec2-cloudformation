@@ -1,11 +1,11 @@
 # CloudFormation Template for creating EC2 instance 
 
-CloudFormation template for creating EC2 instance hosting html page located in s3 bucket 
+CloudFormation template for creating EC2 instance hosting html page located in s3 bucket___ 
 It is using Cloudfromation Helper Scripts to configure and install WebServer
 
 ## Prequests 
-1. HTML page uploaded in S3 bucket
-2. SSH key generated from AWS console
+1. HTML page uploaded in S3 bucket (attached in rep **webapp.html** as an example in).
+2. SSH key generated from AWS console.
 
 ## PARAMETERS 
  Name | Description | Type | Default | 
