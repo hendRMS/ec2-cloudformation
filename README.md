@@ -7,7 +7,7 @@ It is using Cloudfromation Helper Scripts to configure and install apache WebSer
 1. HTML page uploaded in S3 bucket (attached in rep **webapp.html** as an example).
 2. SSH key generated from AWS console.
 
-## PARAMETERS 
+## Parameters
  Name | Description | Type | Default | 
 |------|-------------|:----:|:-----:|
 | InstanceType | WebServer EC2 instance type | string | t2.micro |
@@ -20,7 +20,7 @@ It is using Cloudfromation Helper Scripts to configure and install apache WebSer
 | SubnetId |Subnet ID that EC2 will operate in it, should be a subnet in selected VPC | AWS::EC2::Subnet::Id | n/a |
 
 
-## OUTPUTS
+## Outputs
 | Name | Description |
 |------|-------------|
 |InstanceId | The instance ID of the web server |
