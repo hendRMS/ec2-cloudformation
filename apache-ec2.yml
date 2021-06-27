@@ -30,9 +30,13 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
   
+  VPC:
+    Description: VPC to operate in
+    Type: AWS::EC2::VPC::Id
+
   SubnetId:
     Description: List of Subnet IDs
-    Type: "List<AWS::EC2::Subnet::Id>"
+    Type: AWS::EC2::Subnet::Id
 
   S3BucketName:
     Description: Name of an existing bucket to download files from
@@ -50,6 +54,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable HTTP access via port 80 and SSH access via port 22
+      VpcId: !Ref VPC
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
@@ -126,8 +131,8 @@ Resources:
       KeyName: !Ref KeyName
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !Ref InstanceProfile # Reference Instance Profile
-      SecurityGroups:
-      - !Ref WebServerSecurityGroup
+      SecurityGroupIds  :
+        - !Ref WebServerSecurityGroup
       UserData:
         Fn::Base64:
           !Sub |
