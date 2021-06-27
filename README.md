@@ -10,7 +10,7 @@ It is using Cloudfromation Helper Scripts to configure and install apache WebSer
 ## PARAMETERS 
  Name | Description | Type | Default | 
 |------|-------------|:----:|:-----:|
-| InstanceType | WebServer EC2 instance type. | string | t2.micro |
+| InstanceType | WebServer EC2 instance type | string | t2.micro |
 | InstanceName | Name of EC2 instance | string | n/a |
 | ImageId | Latest Amazon Linux AMI SSM  | AWS::SSM::Parameter::Value<String>| Latest Amazon Linux AMI |
 | KeyName | Name of an existing EC2 KeyPair to enable SSH access to the instances | AWS::EC2::KeyPair::KeyName  | n/a |
